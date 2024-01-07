@@ -1,11 +1,21 @@
 //  API USED => https://api.github.com/user/user_name
 
 const button = document.getElementById("search");
+const inputField = document.getElementById("input");
 
 button.addEventListener("click", function () {
   document.getElementById("profile-card").style.display = "block";
   
 });
+
+if (button) {
+  inputField.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) { // 13 is the Enter key code
+      button.click();  // Trigger the button click
+      event.preventDefault(); // Prevent default form submission (if applicable)
+    }
+  });
+}
 
 let input_user = document.querySelector("#input");
 
