@@ -8,14 +8,11 @@ button.addEventListener("click", function () {
   
 });
 
-if (button) {
-  inputField.addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) { // 13 is the Enter key code
-      button.click();  // Trigger the button click
-      event.preventDefault(); // Prevent default form submission (if applicable)
-    }
-  });
-}
+inputField.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) { // 13 is the Enter key code
+    button.click(); // Trigger the button click
+  }
+});
 
 let input_user = document.querySelector("#input");
 
